@@ -1,0 +1,21 @@
+{
+  "name": "intronode",
+  "version": "1.0.0",
+  "description": "monolito creado con nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon server"
+  },
+  "keywords": [
+    "node",
+    "javascript"
+  ],
+  "author": "juan sebastian peralta muñoz",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "pug": "^3.0.0"
+  }
+}
