@@ -8,7 +8,9 @@ module.exports = function() {
     })
 
     router.get('/nosotros', (req, res) => {
-        res.render('nosotros');
+        res.render('nosotros', {
+            pagina: 'Nosotros'
+        });
     })
 
     return router;

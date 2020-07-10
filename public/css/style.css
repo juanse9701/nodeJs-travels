@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+.container {
+    padding: 0 4rem;
+}
+/*--------- header ---------------*/
 header {
     display: flex;
     justify-content: space-between;
@@ -24,7 +28,8 @@ header nav a {
     text-decoration: none;
     color: white;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
 }
 
 header nav a:nth-child(n+1) {
@@ -33,4 +38,25 @@ header nav a:nth-child(n+1) {
 
 header picture img {
     width: 100%;
+}
+
+/* ------------Footer------------ */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+}
+
+footer nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    margin-right: 7px;
+}
+
+footer .copyright {
+    text-transform: uppercase;
+    font-weight: 700;
 }
