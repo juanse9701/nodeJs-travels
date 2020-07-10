@@ -9,6 +9,10 @@ app.set('view engine', 'pug')
 /* Indicar la direccion de las vistas */
 app.set('views', path.join(__dirname, './views'))
 
+/* establecer estaticos */
+
+app.use(express.static('public'))
+
 /* Configuración del servidor
 
     routes es una funcion por lo cual se debe invocar
