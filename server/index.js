@@ -15,7 +15,7 @@ app.use(express.static('public'))
 
 /* Configuración del servidor
 
-    routes es una funcion por lo cual se debe invocar
+    routes es una funcion por lo cual se debe invocar, esta nos indica las rutas de nuestra aplicación
 */
 app.use('/', routes())
 
