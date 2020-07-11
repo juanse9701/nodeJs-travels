@@ -1,5 +1,6 @@
 :root {
     font-family: 'Montserrat', sans-serif;
+    --pearl:  rgb(5, 196, 196);
 }
 
 *{
@@ -9,14 +10,24 @@
 }
 
 .container {
-    padding: 0 4rem;
+    padding-left:4rem;
+    padding-right:4rem;
 }
+
+p {
+    margin-bottom: .7rem;
+}
+
+h1,h2,h3,h4,h5, h6 {
+    margin-bottom: 1rem;
+}
+
 /*--------- header ---------------*/
 header {
     display: flex;
     justify-content: space-between;
     padding: 1rem 4rem;
-    background-color: rgb(5, 196, 196);
+    background-color: var(--pearl);
 }
 
 header nav {
@@ -59,4 +70,67 @@ footer nav a {
 footer .copyright {
     text-transform: uppercase;
     font-weight: 700;
+}
+
+footer .copyright p {
+    margin: 0;
+}
+
+/* ------------------nosotros------------------------------ */
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+.row2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid .picture-nosotros img {
+    width: 100%;
+}
+
+.grid .content h1 {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.grid .content blockquote {
+    font-weight: 700;
+    margin-bottom: .7rem;
+}
+
+main .banner-info{ 
+    display: flex;
+    padding: 3rem;
+    background: #eeeeee;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+main .banner-info .banner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 295px;
+    margin: 0 6px;
+}
+
+main .banner-info .banner .title {
+    text-transform: uppercase;
+    color: var(--pearl);
+}
+
+main .banner-info .banner img {
+    width: 100px;
+    object-fit: contain;
+    margin-bottom: .7rem;
 }

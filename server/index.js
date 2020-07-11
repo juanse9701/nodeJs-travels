@@ -16,7 +16,7 @@ app.use(express.static('public'))
 
 /* Definiendo el titulo de la página dependiendo del entorno */
 
-const config = app.get('env')
+const config = app.get('env') //obtengo el titulo
 
 app.locals.title = configs[config].title
 
