@@ -3,6 +3,14 @@ const routes = require('./routes')
 const path = require('path')
 const app = express()
 const configs = require('./config')
+const db = require('./config/database')
+
+/* Conexion a la base de datos de mysql */
+db.authenticate().then(()=>{
+    console.log('se conecto a la base de datos')
+}).catch((e)=> {
+    console.error('hubo un error a la hora de establecer la conexion '+e)
+})
 
 /* Habilitar pug */
 app.set('view engine', 'pug')
