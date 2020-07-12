@@ -1,0 +1,14 @@
+extends ../layout/index
+block content
+    main.mt-3.container
+        h1.title #{pagina}
+        .grid.flow
+            each viaje in viajes
+                .card
+                    img(src=`img/destinos_${viaje.imagen}.jpg`, alt= viaje.titulo class="card-img")
+                    .card-body
+                        h4.card-title #{viaje.titulo}
+                        p 📅 #{viaje.fecha_ida} - #{viaje.fecha_vuelta}
+                        p 💰 #{viaje.precio}
+                        p #{viaje.descripcion.substr(0,100)}...
+                        a.btn(href=`viajes/${viaje.id}`) Más información

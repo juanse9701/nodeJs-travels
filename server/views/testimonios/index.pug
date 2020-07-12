@@ -1,0 +1,15 @@
+extends ../layout/index
+block content
+    main.mt-3
+        h1.title #{page}
+        form.form(action="/testimonios", method="post")
+            .form-group
+                label(for="name") Nombre
+                input(type="text", id="name", name="name")
+            .form-group
+                label(for="email") Email
+                input(type="email", id="email", name="email")
+            .form-group
+                label(for="message") Testimonio
+                textarea(name="message", rows="3", id="message")
+            button.btn(type="submit") Agregar    

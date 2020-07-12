@@ -1,16 +1,10 @@
 const express = require('express')
 const routes = require('./routes')
 const path = require('path')
+
 const app = express()
 const configs = require('./config')
-const db = require('./config/database')
-
-/* Conexion a la base de datos de mysql */
-db.authenticate().then(()=>{
-    console.log('se conecto a la base de datos')
-}).catch((e)=> {
-    console.error('hubo un error a la hora de establecer la conexion '+e)
-})
+const bodyParser = require('body-parser')
 
 /* Habilitar pug */
 app.set('view engine', 'pug')
@@ -36,6 +30,9 @@ app.use((req, res, next) => {
     res.locals.year = fecha.getFullYear()
     return next()
 })
+
+/* Configurando el body parser para recibir la data */
+app.use(bodyParser.urlencoded({extended: true}));
 
 /* Configuración del servidor
 

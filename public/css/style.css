@@ -1,6 +1,7 @@
 :root {
     font-family: 'Montserrat', sans-serif;
     --pearl:  rgb(5, 196, 196);
+    --pearlHover: rgb(6, 180, 180);
 }
 
 *{
@@ -9,19 +10,42 @@
     box-sizing: border-box;
 }
 
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .container {
     padding-left:4rem;
     padding-right:4rem;
+}
+
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--pearl);
 }
 
 p {
     margin-bottom: .7rem;
 }
 
+a {
+    cursor: pointer;
+}
+
 h1,h2,h3,h4,h5, h6 {
     margin-bottom: 1rem;
 }
-
+.btn {
+    display: block;
+    width: 100%;
+    padding: .5rem 0;
+    text-align: center;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    font-weight: 700px;
+}
 /*--------- header ---------------*/
 header {
     display: flex;
@@ -47,6 +71,10 @@ header nav a:nth-child(n+1) {
     margin-right: 7px;
 }
 
+header nav a label {
+    cursor: pointer;
+}
+
 header picture img {
     width: 100%;
 }
@@ -65,6 +93,10 @@ footer nav a {
     font-weight: 700;
     color: black;
     margin-right: 7px;
+}
+
+footer nav a label {
+    cursor: pointer;
 }
 
 footer .copyright {
@@ -133,4 +165,94 @@ main .banner-info .banner img {
     width: 100px;
     object-fit: contain;
     margin-bottom: .7rem;
+}
+
+/*------------------ Viajes----------------- */
+
+.flow {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0, 0,0, .4);
+    border-radius: 5px;
+}
+
+.card .card-img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.card .card-body {
+    padding: .5rem;
+}
+
+.card .card-body .card-title {
+    text-transform: uppercase;
+    color: var(--pearl);
+}
+
+.card .card-body .btn {
+    text-decoration: none;
+    background-color: var(--pearl);
+    color: white;
+    font-weight: 700;
+    padding: .5rem 0;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/*------------------------ Testimonios----------------- */
+
+
+.form {
+    width: 800px;
+    min-width: 300px;
+    margin: auto;
+    padding-bottom: .7rem;
+}
+
+.form-group {
+    padding: 1rem 0;
+}
+
+.form .btn {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    background-color: var(--pearl);
+    border: none;
+    font-weight: 700;
+}
+
+.form .btn:hover {
+    background-color: var(--pearlHover);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: .6rem;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    margin-bottom: .7rem;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    font-size: 1.2rem;
+    padding: .5rem .7rem;
+}
+
+.form-group textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: .7rem;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    font-size: 1.2rem;
+    padding: .5rem .7rem;
 }

@@ -1,0 +1,15 @@
+extends ../layout/index
+block content
+    main.mt-3
+        .grid.row2.container
+            .picture-nosotros
+                img(src=`/img/destinos_${viaje.imagen}_ln.jpg`, alt= viaje.titulo)
+            .content
+                h1 #{pagina}
+                p 📅 #{viaje.fecha_ida} - #{viaje.fecha_vuelta}
+                p 💰 #{viaje.precio}
+                if Number(viaje.disponibles) > 1
+                    p 👪 #{viaje.disponibles} Disponibles
+                else 
+                    p 🙍 #{viaje.disponibles} Disponible   
+                p #{viaje.descripcion}
