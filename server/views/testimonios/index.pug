@@ -2,14 +2,23 @@ extends ../layout/index
 block content
     main.mt-3
         h1.title #{page}
+        .grid.flow
+            each testimonio in testimonios
+                .card
+                    .card-body
+                        p.message #{testimonio.message}
+                        p.name --#{testimonio.name}
+        if (errors)
+            .error
+                label #{errors}
         form.form(action="/testimonios", method="post")
             .form-group
                 label(for="name") Nombre
-                input(type="text", id="name", name="name")
+                input(type="text", id="name",placeholder="Escribe tu nombre..", name="name", value= name)
             .form-group
                 label(for="email") Email
-                input(type="email", id="email", name="email")
+                input(type="email", id="email",placeholder="Escribe tu correo electronico..", name="email", value= email)
             .form-group
                 label(for="message") Testimonio
-                textarea(name="message", rows="3", id="message")
+                textarea(name="message", rows="3", placeholder="mensaje", id="message") #{message}
             button.btn(type="submit") Agregar    

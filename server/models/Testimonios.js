@@ -11,6 +11,8 @@ const testimonio = db.define('testimonio', {
     message: {
         type: DataTypes.STRING
     }
+},{
+    timestamps: false
 })
 
 module.exports = testimonio;
