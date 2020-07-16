@@ -1,2 +1,21 @@
-h1 Inicio
-p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro omnis blanditiis eaque debitis in officiis repellat necessitatibus sed. Et, quia.
+extends ../layout/index
+block banner
+    .banner
+        h1 Piedra del peñol
+        em Antoquia
+
+block content
+    main.mt-3.container
+        h2.title sobre nosotros
+        section.grid.row2.mt-3
+            article
+                p.about-us Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatibus deserunt soluta facilis cum ratione ipsum veritatis ut id maxime porro voluptatum, praesentium amet modi saepe eius tempora quos distinctio!
+            picture.picture-nosotros
+                img(src="/img/inicio_nosotros.jpg", alt="sobre nosotros")    
+
+    .descuento
+        .grid.row2
+            article.text-descuento
+                p.title 5% de descuento
+                h3.title.white Viaje a canada
+                p.title $2500

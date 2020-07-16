@@ -25,6 +25,9 @@ main {
     text-transform: uppercase;
     color: var(--pearl);
 }
+.title.white {
+    color: white;
+}
 
 p {
     margin-bottom: .7rem;
@@ -69,6 +72,13 @@ header {
     background-color: var(--pearl);
 }
 
+header.index {
+    background: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
 header nav {
     display: flex;
     align-items: center;
@@ -93,6 +103,7 @@ header nav a label {
 header picture img {
     width: 100%;
 }
+
 
 /* ------------Footer------------ */
 
@@ -121,6 +132,69 @@ footer .copyright {
 
 footer .copyright p {
     margin: 0;
+}
+
+@media screen and (max-width: 425px) {
+    footer {
+        padding: 1rem 2rem;
+    }
+
+    footer nav a {
+        font-size: 9px;
+    }
+
+    footer .copyright p {
+        font-size: 9px;
+    }
+}
+
+/* -------------------Inicio------------------------ */
+.banner {
+    background-image: url('../img/superior.jpg');
+    min-height: 600px;
+    height: 100vh;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.banner h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: 14px;
+}
+
+.banner em {
+    font-size: 4rem;
+    font-size: 4rem;
+    font-family: co;
+    order: -1;
+    line-height: .8;
+}
+.descuento {
+    background-image: url('../img/cupon.jpg');
+    background-size: cover;
+    min-height: 300px;
+}
+.descuento .grid {
+    padding: 0;
+}
+.descuento .grid .text-descuento {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0, .5) 0%, rgba(0,0,0, .5) 100%);
+}
+
+.descuento .grid .text-descuento p.title {
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 /* ------------------nosotros------------------------------ */
@@ -153,6 +227,10 @@ footer .copyright p {
     margin-bottom: .7rem;
 }
 
+.grid article .about-us {
+    font-size: 1.5rem;
+}
+
 main .banner-info{ 
     display: flex;
     padding: 3rem;
@@ -182,6 +260,11 @@ main .banner-info .banner img {
     margin-bottom: .7rem;
 }
 
+@media screen and (max-width: 426px){
+    .row2 {
+        grid-template-columns: 1fr;
+    }
+}
 /*------------------ Viajes----------------- */
 
 .flow {
@@ -284,3 +367,9 @@ main .banner-info .banner img {
     font-size: 1.2rem;
     padding: .5rem .7rem;
 }
+
+@media screen and (max-width: 768px) {
+    .form {
+        width: 100%;
+    }
+} 

@@ -8,7 +8,10 @@ const { render } = require('pug');
 module.exports = function() {
 
     router.get('/', (req, res) => {
-        res.render('index');
+        res.render('index',{
+            css: 'index',
+            pagina: 'inicio'
+        });
     })
 
     router.get('/nosotros', (req, res) => {
