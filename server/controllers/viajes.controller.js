@@ -13,13 +13,14 @@ exports.getTravels = (req, res) => {
     .catch( e => console.log('error en '+ e))
 }
 
-exports.getTravel = (req, res) => {
-    Viaje.findByPk(req.params.id)
-    .then(viaje => {
+exports.getTravel = async (req, res) => {
+    try {
+        const viaje = await Viaje.findByPk(req.params.id);
         res.render('viaje', {
             pagina: viaje.titulo,
-            viaje
+            viaje: viaje
         });
-    })
-    .catch( e => console.log('error en '+ e))
+    } catch ( e) {
+        console.log('error en '+ e);
+    }
 }
