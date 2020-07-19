@@ -8,10 +8,18 @@ const { render } = require('pug');
 module.exports = function() {
 
     router.get('/', (req, res) => {
-        res.render('index',{
-            css: 'index',
-            pagina: 'inicio'
-        });
+        const p1 = Viaje.findAll({limit: 3});
+        const p2 = Testimonio.findAll({limit: 3})
+
+        Promise.all([p1, p2]).then( result => {
+            res.render('index',{
+                css: 'index',
+                pagina: 'inicio',
+                viajes: result[0],
+                testimonios: result[1]
+            }).catch(e => console.log('Error: ' + e));
+        })
+
     })
 
     router.get('/nosotros', (req, res) => {

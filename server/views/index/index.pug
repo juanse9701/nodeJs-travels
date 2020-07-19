@@ -1,6 +1,6 @@
 extends ../layout/index
 block banner
-    .banner
+    .banner-index
         h1 Piedra del peñol
         em Antoquia
 
@@ -11,7 +11,11 @@ block content
             article
                 p.about-us Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatibus deserunt soluta facilis cum ratione ipsum veritatis ut id maxime porro voluptatum, praesentium amet modi saepe eius tempora quos distinctio!
             picture.picture-nosotros
-                img(src="/img/inicio_nosotros.jpg", alt="sobre nosotros")    
+                img(src="/img/inicio_nosotros.jpg", alt="sobre nosotros")
+
+        h2.title Nuestros viajes
+        section.mt-3
+            include ../layout/partials/viajes            
 
     .descuento
         .grid.row2

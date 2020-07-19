@@ -149,7 +149,7 @@ footer .copyright p {
 }
 
 /* -------------------Inicio------------------------ */
-.banner {
+.banner-index {
     background-image: url('../img/superior.jpg');
     min-height: 600px;
     height: 100vh;
@@ -162,13 +162,13 @@ footer .copyright p {
     color: #ffffff;
 }
 
-.banner h1 {
+.banner-index h1 {
     text-transform: uppercase;
     font-size: 4rem;
     letter-spacing: 14px;
 }
 
-.banner em {
+.banner-index em {
     font-size: 4rem;
     font-size: 4rem;
     font-family: co;

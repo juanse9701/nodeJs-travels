@@ -25,7 +25,6 @@ app.locals.title = configs[config].title
 /* Middleware */
 
 app.use((req, res, next) => {
-
     const fecha = new Date()
     res.locals.year = fecha.getFullYear()
     return next()
