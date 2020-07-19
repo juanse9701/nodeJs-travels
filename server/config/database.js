@@ -1,7 +1,8 @@
 const sequelize = require('sequelize')
+require('dotenv').config({path: 'variables.env'})
 
-module.exports = new sequelize('viajes', 'root', 'root', {
+module.exports = new sequelize(process.env.BD_NAME, process.env.BD_USER, process.env.BD_PASS, {
     dialect: 'mysql',
-    host: '127.0.0.1',
-    port: '3306'
+    host: process.env.BD_HOST,
+    port: process.env.BD_PORT
 })
