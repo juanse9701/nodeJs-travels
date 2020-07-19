@@ -2,12 +2,7 @@ extends ../layout/index
 block content
     main.mt-3.container
         h1.title #{page}
-        .grid.flow
-            each testimonio in testimonios
-                .card
-                    .card-body
-                        p.message #{testimonio.message}
-                        p.name --#{testimonio.name}
+        include ../layout/partials/testimonios
         if (errors)
             .error
                 label #{errors}
