@@ -2,6 +2,7 @@
     font-family: 'Montserrat', sans-serif;
     --pearl:  rgb(5, 196, 196);
     --pearlHover: rgb(6, 180, 180);
+    --maxWidth: 1200px;
 }
 
 *{
@@ -195,6 +196,11 @@ footer .copyright p {
 .descuento .grid .text-descuento p.title {
     font-weight: 700;
     font-size: 1.5rem;
+}
+
+.testimonios {
+    max-width: var(--maxWidth);
+    margin: auto;
 }
 
 /* ------------------nosotros------------------------------ */
