@@ -4,7 +4,8 @@
   "description": "monolito creado con nodeJS",
   "main": "index.js",
   "scripts": {
-    "serve": "nodemon server"
+    "serve": "nodemon server",
+    "start": "node server"
   },
   "keywords": [
     "node",

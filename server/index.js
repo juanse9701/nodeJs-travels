@@ -4,7 +4,8 @@ const path = require('path')
 
 const app = express()
 const configs = require('./config')
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+require('dotenv').config({path: 'variables.env'});
 
 /* Habilitar pug */
 app.set('view engine', 'pug')
@@ -39,7 +40,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 */
 app.use('/', routes())
 
+const HOST = process.env.HOST || '0.0.0.0';
+const PORT = process.env.PORT || 3002;
+
 /* Puerto donde escuchara */
-app.listen(3002, () => {
-    console.log('servidor corriendo en el puerto 3002')
+app.listen(PORT, HOST, () => {
+    console.log('servidor corriendo')
 })
