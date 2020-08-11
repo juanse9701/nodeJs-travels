@@ -5,7 +5,7 @@ const db = require('../config/database')
 /* db.authenticate().then(()=>{
     console.log('se conecto a la base de datos')
 }).catch((e)=> {
-    console.error('hubo un error a la hora de establecer la conexion '+e)
+    console.error('hubo un error a la hora de establecer la conexion '+ e)
 }) */
 
 const Viaje = db.define('viaje', {

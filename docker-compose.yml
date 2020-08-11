@@ -1,0 +1,27 @@
+version: '3.1'
+
+services: 
+
+    # web_viajes:
+    #     depends_on: 
+    #         - db_viajes
+    #     container_name: web_viajes
+    #     env_file: 
+    #         - variables.env 
+    #     build: .
+    #     ports: 
+    #         - "3000:3002"
+    #     restart: on-failure
+
+    db_viajes:
+        container_name: db_viajes
+        image: postgres:11
+        environment:
+            POSTGRES_USER: user1
+            # POSTGRES_DB: viajes
+            POSTGRES_HOST_AUTH_METHOD: trust
+        volumes:
+            - ./db/data:/var/lib/postgresql/data
+            - ./db/init:/docker-entrypoint-initdb.d/:ro
+        ports: 
+            - "5432:5432"

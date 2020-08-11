@@ -3,6 +3,7 @@ const routes = require('./routes')
 const path = require('path')
 
 const app = express()
+const sequelize = require('./config/database');
 const configs = require('./config')
 const bodyParser = require('body-parser');
 require('dotenv').config({path: 'variables.env'});
@@ -40,10 +41,21 @@ app.use(bodyParser.urlencoded({extended: true}));
 */
 app.use('/', routes())
 
-const HOST = process.env.HOST || '0.0.0.0';
-const PORT = process.env.PORT || 3002;
+sequelize
+  .sync({
+    //force: true
+  })
+  .then(result => {
+    console.log(result);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+
+// const HOST = process.env.HOST || '0.0.0.0';
+const PORT = 3002;
 
 /* Puerto donde escuchara */
-app.listen(PORT, HOST, () => {
-    console.log('servidor corriendo')
+app.listen(PORT, () => {
+    console.log('servidor corriendo in port ' + PORT)
 })
