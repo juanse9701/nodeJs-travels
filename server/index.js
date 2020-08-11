@@ -41,17 +41,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 */
 app.use('/', routes())
 
-sequelize
-  .sync({
-    //force: true
-  })
-  .then(result => {
-    console.log(result);
-  })
-  .catch(err => {
-    console.log(err);
-  });
-
 // const HOST = process.env.HOST || '0.0.0.0';
 const PORT = 3002;
 
