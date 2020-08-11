@@ -18,7 +18,6 @@ services:
         image: postgres:11
         environment:
             POSTGRES_USER: user1
-            # POSTGRES_DB: viajes
             POSTGRES_HOST_AUTH_METHOD: trust
         volumes:
             - ./db/data:/var/lib/postgresql/data
